@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 #loading the saved model
-st.set_option('browser.gatherUsageStats', False)
+# st.set_option('browser.gatherUsageStats', False)
 loaded_model = pickle.load(open('C:/Users/hp/Desktop/car model deployment/car_predict.sav', 'rb'))
 
 df = pd.read_csv('C:/Users/hp/Desktop/car model deployment/cardata.csv')
