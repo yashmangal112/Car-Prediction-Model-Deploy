@@ -3,9 +3,10 @@ import pickle
 import streamlit as st
 import pandas as pd
 #loading the saved model
-loaded_model = pickle.load(open('/home/appuser/car model deployment/car_predict.sav', 'rb'))
+st.set_option('browser.gatherUsageStats', False)
+loaded_model = pickle.load(open('C:/Users/hp/Desktop/car model deployment/car_predict.sav', 'rb'))
 
-df = pd.read_csv('/home/appuser/car model deployment/cardata.csv')
+df = pd.read_csv('C:/Users/hp/Desktop/car model deployment/cardata.csv')
 df = df['Kms_Driven']
 # year_data = df['Year']
 
