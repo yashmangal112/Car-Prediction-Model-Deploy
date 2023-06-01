@@ -3,9 +3,9 @@ import pickle
 import streamlit as st
 import pandas as pd
 #loading the saved model
-loaded_model = pickle.load(open('C:/Users/hp/Desktop/car model deployment/car_predict.sav', 'rb'))
+loaded_model = pickle.load(open('/home/appuser/car model deployment/car_predict.sav', 'rb'))
 
-df = pd.read_csv('C:/Users/hp/Desktop/car model deployment/cardata.csv')
+df = pd.read_csv('/home/appuser/car model deployment/cardata.csv')
 df = df['Kms_Driven']
 # year_data = df['Year']
 
@@ -46,7 +46,7 @@ def main():
         # Seller_Type = st.radio('select your seller type',('Dealer', 'Individual'))
         Transmission = st.selectbox('select your transmission type',('Manual', 'Automatic'))
 
-        Owner = st.select_slider('Select the number of owner',options=[0, 1, 3])
+        Owner = st.slider('Select the number of owner', min_value=0, max_value=3, step=1)
         # st.write('Owner is', Owner)
 
         # Get unique values from the 'Kms_driven' column
