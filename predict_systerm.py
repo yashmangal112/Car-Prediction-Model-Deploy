@@ -3,7 +3,7 @@ import pickle
 
 
 #loading the saved model
-loaded_model = pickle.load(open('C:/Users/hp/Desktop/car model deployment/car_predict.sav', 'rb'))
+loaded_model = pickle.load(open('C:/Users/hp/Desktop/car-prediction-model-deploy/car_predict.sav', 'rb'))
 
 input_data = (2017,5.71,2400,0,0,0,0)
 
