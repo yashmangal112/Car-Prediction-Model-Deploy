@@ -4,7 +4,8 @@ import streamlit as st
 import pandas as pd
 #loading the saved model
 # st.set_option('browser.gatherUsageStats', False)
-loaded_model = pickle.load(open('C:/Users/hp/Desktop/car-prediction-model-deploy/car_predict.sav', 'rb'))
+with open('C:/Users/hp/Desktop/car-prediction-model-deploy/car_predict.sav', 'rb') as handle:
+     loaded_model = pickle.load(handle)
 
 df = pd.read_csv('C:/Users/hp/Desktop/car-prediction-model-deploy/cardata.csv')
 df = df['Kms_Driven']
