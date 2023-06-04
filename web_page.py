@@ -16,7 +16,9 @@ path_to_model = "./models/car_predict.sav"
 with open(path_to_model, 'rb') as handle:
      loaded_model = pickle.load(handle)
 
-df = pd.read_csv('C:/Users/hp/Desktop/car-prediction-model-deploy/cardata.csv')
+
+
+df = pd.read_csv('./cardata.csv')
 df = df['Kms_Driven']
 # year_data = df['Year']
 
