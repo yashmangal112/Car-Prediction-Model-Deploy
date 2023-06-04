@@ -2,9 +2,18 @@ import numpy as np
 import pickle
 import streamlit as st
 import pandas as pd
+# from utils import wrangle
+import sys
+import path
+# from path import Path
+
+
+dir = path.Path(__file__).abspath()
+sys.path.append(dir.parent.parent)
+
+path_to_model = "./models/car_predict.sav"
 #loading the saved model
-# st.set_option('browser.gatherUsageStats', False)
-with open('C:/Users/hp/Desktop/car-prediction-model-deploy/car_predict.sav', 'rb') as handle:
+with open(path_to_model, 'rb') as handle:
      loaded_model = pickle.load(handle)
 
 df = pd.read_csv('C:/Users/hp/Desktop/car-prediction-model-deploy/cardata.csv')
